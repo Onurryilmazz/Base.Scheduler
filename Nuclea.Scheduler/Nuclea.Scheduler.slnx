@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Nuclea.Common/Nuclea.Common.csproj" />
+  <Project Path="Nuclea.Data/Nuclea.Data.csproj" />
+  <Project Path="Nuclea.Quartz.Business/Nuclea.Quartz.Business.csproj" />
+  <Project Path="Nuclea.Quartz/Nuclea.Quartz.csproj" />
+</Solution>

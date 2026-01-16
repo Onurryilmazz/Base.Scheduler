@@ -1,0 +1,3 @@
+namespace Nuclea.Common.Business.Interfaces;
+
+public interface ISingletonService { }
