@@ -5,7 +5,7 @@ using Quartz;
 
 namespace Nuclea.Quartz.Business.Jobs;
 
-public class ExampleJob(ILogger logger, IHttpContextAccessor contextAccessor, NucleaDataContext context)
+public class ExampleJob(ILogger<ExampleJob> logger, IHttpContextAccessor contextAccessor, NucleaDataContext context)
     : BaseQuartzJob(logger, contextAccessor, context)
 {
     protected override Task ExecuteJobAsync(IJobExecutionContext context)
