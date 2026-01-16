@@ -71,6 +71,18 @@ public abstract class BaseQuartzJob(
         {
             throw new InvalidOperationException($"Database context is null for job {jobKey.Name} in group {jobKey.Group}");
         }
+
+        try
+        {
+            Logger.LogInformation("Executing job {JobName} in group {JobGroup}", JobName, JobGroup);
+            await ExecuteJobAsync(context);
+            Logger.LogInformation("Successfully executed job {JobName} in group {JobGroup}", JobName, JobGroup);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Error while executing job {JobName} in group {JobGroup}", JobName, JobGroup);
+            throw;
+        }
     }
     
     protected abstract Task ExecuteJobAsync(IJobExecutionContext context);

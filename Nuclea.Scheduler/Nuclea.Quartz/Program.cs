@@ -105,7 +105,7 @@ app.Lifetime.ApplicationStarted.Register(async () =>
 
                     await scheduler.ScheduleJob(jobDetail, trigger);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // ignored
                 }
@@ -131,7 +131,7 @@ app.Lifetime.ApplicationStarted.Register(async () =>
             }
         }
     }
-    catch (Exception ex)
+    catch (Exception)
     {
         // ignored
     }
